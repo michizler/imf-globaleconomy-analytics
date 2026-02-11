@@ -10,7 +10,7 @@ An interactive Power BI dashboard exploring 20 years of global economic data fro
 
 ## 📸 Dashboard Preview
 
-![Dashboard Screenshot](dashboard/Global%20Economic%20Outlook%20(IMF%202001-2020).png)
+![Dashboard Screenshot](dashboard/dashboard-preview.png)
 
 ---
 
