@@ -1,0 +1,83 @@
+CABal_pct = 
+CALCULATE(
+    DIVIDE(AVERAGE('Economic Data'[Indicator Value]), 100),
+    KEEPFILTERS('Economic Data'[Indicator] =
+        "Current account balance,Percent of GDP"
+    )
+)
+
+CABal_PerYear = 
+CALCULATE(
+    AVERAGE('Economic Data'[Indicator Value]),
+    'Economic Data'[Indicator] = "Current account balance,Percent of GDP"
+)
+
+Fiscal_pct = 
+CALCULATE(
+    DIVIDE(AVERAGE('Economic Data'[Indicator Value]), 100),
+    KEEPFILTERS('Economic Data'[Indicator] =
+            "General government net lending/borrowing,Percent of GDP"
+    )
+)
+
+FiscalBal_PerYear = 
+CALCULATE(
+    AVERAGE('Economic Data'[Indicator Value]),
+    'Economic Data'[Indicator] = "General government net lending/borrowing,Percent of GDP"
+)
+
+GDPGrowth = 
+CALCULATE(
+    DIVIDE(AVERAGE('Economic Data'[Indicator Value]), 100),
+    KEEPFILTERS('Economic Data'[Indicator] =
+        "Gross domestic product, constant prices,Percent change"
+    )
+)
+
+GDPGrowth_PerYear = 
+CALCULATE(
+    AVERAGE('Economic Data'[Indicator Value]),
+    'Economic Data'[Indicator] = "Gross domestic product, constant prices,Percent change"
+)
+
+GovtDebt_pct = 
+CALCULATE(
+    DIVIDE(AVERAGE('Economic Data'[Indicator Value]), 100),
+    KEEPFILTERS('Economic Data'[Indicator] =
+        "General government gross debt,Percent of GDP"
+    )
+)
+
+GovtDebt_PerYear = 
+CALCULATE(
+    AVERAGE('Economic Data'[Indicator Value]),
+    'Economic Data'[Indicator] = "General government gross debt,Percent of GDP"
+)
+
+Inflation_PerYear = 
+CALCULATE(
+    AVERAGE('Economic Data'[Indicator Value]),
+    'Economic Data'[Indicator] = "Inflation, average consumer prices,Percent change"
+)
+
+Inflation_rate = 
+CALCULATE(
+    DIVIDE(AVERAGE('Economic Data'[Indicator Value]), 100),
+    KEEPFILTERS('Economic Data'[Indicator] =
+        "Inflation, average consumer prices,Percent change"
+    )
+)
+
+Unemployment_PerYear = 
+CALCULATE(
+    AVERAGE('Economic Data'[Indicator Value]),
+    'Economic Data'[Indicator] = "Unemployment rate,Percent of total labor force"
+)
+
+Unemployment_rate = 
+CALCULATE(
+    DIVIDE(AVERAGE('Economic Data'[Indicator Value]), 100),
+    KEEPFILTERS('Economic Data'[Indicator] =
+        "Unemployment rate,Percent of total labor force"
+    )
+)

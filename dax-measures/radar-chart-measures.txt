@@ -1,0 +1,27 @@
+RadarTable = 
+DATATABLE(
+    "Indicator", STRING,
+    {
+        {"GDP Growth"},
+        {"Inflation"},
+        {"Unemployment"},
+        {"Fiscal Balance"},
+        {"Debt"},
+        {"Current Account"}
+    }
+)
+
+Indicator Value = 
+VAR SelectedIndicator =
+    SELECTEDVALUE(RadarTable[Indicator])
+RETURN
+SWITCH(
+    SelectedIndicator,
+    "GDP Growth",        [GDPGrowth],
+    "Inflation",         [Inflation_rate],
+    "Unemployment",      [Unemployment_rate],
+    "Fiscal Balance",    [Fiscal_pct],
+    "Debt",              [GovtDebt_pct],
+    "Current Account",   [CABal_pct],
+    BLANK()
+)

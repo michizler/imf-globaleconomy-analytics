@@ -1,0 +1,8 @@
+Line Trend Indicators = {
+    ("GDP Growth", NAMEOF('Economic Data'[GDPGrowth]), 0),
+    ("Current Account Balance", NAMEOF('Economic Data'[CABal_pct]), 1),
+    ("Fiscal Balance", NAMEOF('Economic Data'[Fiscal_pct]), 2),
+    ("Government Debt", NAMEOF('Economic Data'[GovtDebt_pct]), 3),
+    ("Inflation Rate", NAMEOF('Economic Data'[Inflation_rate]), 4),
+    ("Unemployment Rate", NAMEOF('Economic Data'[Unemployment_rate]), 5)
+}
